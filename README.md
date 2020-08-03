@@ -25,4 +25,5 @@ Array of String
 * (From lesson) TC01 => create_new_buffer_should_empty
 * (From lesson) TC02 => create_new_buffer_with_default_size_should_10
 * (From lesson) TC03 => write_A_B_to_buffer_should_read_A_B_from_buffer
-* TC04 => readBuffer_should_not_more_than_writeBuffer
+* TC04 => writeBuffer_should_not_more_than_Buffer
+* TC05 => when_buffer_full_B_overwrite_by_A

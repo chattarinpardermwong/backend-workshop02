@@ -32,7 +32,7 @@ public class CircularBufferTest {
     }
 
     @Test
-    public void readBuffer_should_not_more_than_writeBuffer(){
+    public void writeBuffer_should_not_more_than_Buffer(){
         CircularBuffer cb = new CircularBuffer();
         for(int i=0;i<10;i++){
             cb.writeData("A"+i);//add
@@ -40,10 +40,18 @@ public class CircularBufferTest {
         for(int i=0;i<10;i++){
             assertEquals("A"+i,cb.readData());
         }
-        assertFalse(cb.isReadMorethanWrite());
+        assertFalse(cb.isWriteMorethanBuffer());
     }
 
+    @Test
+    public void when_buffer_full_B_overwrite_by_A() {
+        CircularBuffer cb = new CircularBuffer();
+        for(int i=0;i<10;i++){
+            cb.writeData("A"+i);//add
+        }
+        cb.writeData("B");
+        assertEquals("B",cb.readData());
 
-
+    }
 
 }
