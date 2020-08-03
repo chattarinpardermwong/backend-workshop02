@@ -25,4 +25,10 @@ public class CircularBuffer {
         return this.buffer[readPointer++];
 
     }
+    public boolean isReadMorethanWrite() {
+        if(readPointer > writePointer){
+            return true;
+        }
+        return false;
+    }
 }

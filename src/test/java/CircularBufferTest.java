@@ -31,5 +31,19 @@ public class CircularBufferTest {
         assertEquals("B",cb.readData());
     }
 
+    @Test
+    public void readBuffer_should_not_more_than_writeBuffer(){
+        CircularBuffer cb = new CircularBuffer();
+        for(int i=0;i<10;i++){
+            cb.writeData("A"+i);//add
+        }
+        for(int i=0;i<10;i++){
+            assertEquals("A"+i,cb.readData());
+        }
+        assertFalse(cb.isReadMorethanWrite());
+    }
+
+
+
 
 }
