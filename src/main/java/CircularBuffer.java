@@ -1,5 +1,5 @@
 public class CircularBuffer {
-    private int bufferSize = 10;
+    private int bufferSize;
     private int bufferSize2 = 10;
     private String[] buffer ;
     private int readPointer;
@@ -12,6 +12,7 @@ public class CircularBuffer {
     //overload
     public CircularBuffer(int size) {
         this.bufferSize = size;
+        this.bufferSize2 = size;
         this.buffer = new String[bufferSize];
     }
 
