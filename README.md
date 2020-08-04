@@ -1,29 +1,29 @@
-### workshop-java-01
-#### Circular buffer
-#### 1. Data structure ? (Internal)
-Array of String
-#### 2. Operations/Behavior/Methods ? user -> CB ?
-* writeData(string):void
+### workshop-java-02 04-08-2020
+#### Tennis-Refactor
+ * refactoring by using getPlayerMatchResult() from 3-if-conditions
+ 
+ EX.
+ 
+ `if (player1Point ==0)
+    score = "Love";
+ if (player1Point ==1)
+    score = "Fifteen";
+ if (player1Point ==2)
+    score = "Thirty";`
+    
+  * get into
+ 
+ `//To fix duplicated 3-if
+      public String getPlayerMatchResult(int playerScore){
+          switch (playerScore){
+              case 0:
+                  return "Love";
+              case 1:
+                  return "Fifteen";
+              case 2:
+                  return "Thirty";
+          }
+          return "Forty";
+      }`
 
-* readData(): string
 
-* isFull(): boolean
-
-* isEmpty(): boolean
-
-* setSize(int): void
-
-#### 3. Internal process ?
-
-* buffer size = 10 (default)
-
-* read pointer = 0
-
-* write pointer = 0
-
-### List of test cases
-* (From lesson) TC01 => create_new_buffer_should_empty
-* (From lesson) TC02 => create_new_buffer_with_default_size_should_10
-* (From lesson) TC03 => write_A_B_to_buffer_should_read_A_B_from_buffer
-* TC04 => writeBuffer_should_not_more_than_Buffer
-* TC05 => when_buffer_full_B_overwrite_by_A
